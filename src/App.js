@@ -1,8 +1,7 @@
-
 import { useState } from 'react';
 function App() {
   const [criteres] = useState(['Prix', 'Qualité', 'Design']);
-  const [alts] = useState(['Option A', 'Option B']);
+
   const [matrice, setMatrice] = useState([[1,3,5],[0.333,1,2],[0.2,0.5,1]]);
   const [res, setRes] = useState(null);
   const calc = () => {
@@ -55,5 +54,3 @@ function App() {
   );
 }
 export default App;
-
-
