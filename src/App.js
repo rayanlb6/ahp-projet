@@ -1,6 +1,6 @@
 import { useState } from 'react';
 function App() {
-  const criteres = useState(['Prix', 'Qualité', 'Design']);
+  const [criteres] = useState(['Prix', 'Qualité', 'Design']);
 
   const [matrice, setMatrice] = useState([[1,3,5],[0.333,1,2],[0.2,0.5,1]]);
   const [res, setRes] = useState(null);
@@ -47,7 +47,7 @@ function App() {
         {res.ok?
           <p style={{color:'green'}}><b>✅ Matrice COHÉRENTE.</b> Vous pouvez utiliser ces poids pour choisir la meilleure alternative.</p> :
           <p style={{color:'red'}}><b>❌ Matrice INCOHÉRENTE car CR {'>'} 0.1</b><br/>
-          Raison: Vos jugements se contredisent. Exemple: si A > B et B > C, alors on doit avoir A > C. Revoyez la matrice.</p>
+          Raison: Vos jugements se contredisent. Exemple: si A est plus grand que B et B plus grand que C, alors on doit avoir A plus grand que C. Revoyez la matrice.</p>
         }
       </div>}
     </div>
